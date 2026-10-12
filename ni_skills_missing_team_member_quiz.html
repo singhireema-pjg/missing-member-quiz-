@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ni Skills | The Missing Team Member</title>
+<style>
+  :root {
+    --navy:#19324d; --blue:#3167d5; --pale:#edf4ff; --ink:#253246;
+    --muted:#5e6b7c; --green:#18794e; --green-bg:#e8f7ef;
+    --red:#b42318; --red-bg:#fff0ef; --gold:#9a6700; --gold-bg:#fff7df;
+    --border:#d9e2ee; --white:#fff; --bg:#f5f8fc;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+  .wrap{max-width:900px;margin:0 auto;padding:24px 16px 50px}
+  header{background:linear-gradient(135deg,#19324d,#3167d5);color:#fff;padding:28px;border-radius:20px}
+  .eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:800;opacity:.88}
+  h1{line-height:1.15;margin:8px 0 10px;font-size:clamp(1.8rem,5vw,2.65rem)}
+  header p{margin:0;max-width:680px}
+  .pill{display:inline-block;margin-top:16px;padding:5px 10px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);border-radius:999px;font-size:.9rem}
+  section{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:22px;margin-top:18px;box-shadow:0 4px 16px rgba(25,50,77,.045)}
+  h2{margin:0 0 10px;color:var(--navy);font-size:1.35rem}
+  .callout{background:var(--pale);border-left:4px solid var(--blue);padding:14px 16px;border-radius:8px;margin-top:14px}
+  .instructions{color:var(--muted)}
+  .progress-row{display:flex;justify-content:space-between;gap:12px;align-items:center;font-weight:700;color:var(--muted);font-size:.92rem}
+  .progress{height:8px;background:#e7edf5;border-radius:99px;overflow:hidden;margin:10px 0 20px}
+  .progress-fill{height:100%;width:0%;background:var(--blue);transition:width .25s ease}
+  .q-label{color:var(--blue);text-transform:uppercase;letter-spacing:.08em;font-weight:800;font-size:.78rem}
+  .question{font-size:1.18rem;font-weight:750;line-height:1.4;margin:8px 0 16px}
+  .option{display:flex;align-items:flex-start;gap:11px;border:1.5px solid var(--border);padding:13px 14px;border-radius:11px;margin:9px 0;cursor:pointer}
+  .option:hover{border-color:#8aa9e9;background:#f9fbff}
+  .option input{margin-top:5px;accent-color:var(--blue);flex:0 0 auto}
+  .option:has(input:checked){border-color:var(--blue);background:var(--pale)}
+  .option.correct{border-color:#65b88d;background:var(--green-bg)}
+  .option.incorrect{border-color:#e9a19b;background:var(--red-bg)}
+  .hint{margin-top:14px}
+  button{border:0;border-radius:10px;padding:11px 17px;font:inherit;font-weight:750;cursor:pointer}
+  button:focus-visible{outline:3px solid #9bb8ff;outline-offset:2px}
+  .primary{background:var(--blue);color:#fff}.primary:hover{background:#2456bb}
+  .secondary{background:#e9eef6;color:var(--navy)}
+  .btn-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  .feedback{margin-top:16px;border-radius:10px;padding:14px}
+  .feedback.good{color:#145c3b;background:var(--green-bg);border:1px solid #a7dfbf}
+  .feedback.bad{color:#8f2018;background:var(--red-bg);border:1px solid #f1b8b3}
+  .feedback h3{margin-bottom:4px;color:inherit;font-size:1rem}
+  .hint-box{background:var(--gold-bg);border:1px solid #ead28d;padding:12px 14px;border-radius:10px;margin-top:10px}
+  .hidden{display:none!important}.small{font-size:.9rem;color:var(--muted)}
+  .score{font-size:2.3rem;font-weight:850;color:var(--blue)}
+  .takeaway{background:#f0f8f3;border-left:4px solid #299764;padding:16px;border-radius:9px}
+  footer{text-align:center;color:var(--muted);font-size:.88rem;padding-top:22px}
+  @media(max-width:560px){.wrap{padding:12px 10px 30px}header,section{padding:18px;border-radius:14px}.btn-row button{flex:1 1 auto}}
+  @media print{body{background:#fff}.wrap{max-width:none;padding:0}header{background:#fff;color:#000;border:2px solid #333}section{box-shadow:none;break-inside:avoid}.interactive-only,.btn-row,.hint,footer{display:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">Ni Skills · Human Intelligence & AI Literacy</div>
+  <h1>The Missing Team Member</h1>
+  <p>Can an AI choose a fair science team using marks alone? Read the scenario, examine the evidence, and decide how people should use AI responsibly.</p>
+  <span class="pill">Grades 7–8 · Ages 12–14 · 5 questions</span>
+</header>
+
+<section id="scenario">
+  <h2>Scenario: The Missing Team Member</h2>
+  <p>You are part of the student council at Greenfield School. The school is selecting five students for an inter-school science challenge, and an AI tool has been asked to recommend the team using students' previous examination marks.</p>
+  <p>The AI selects five students with the highest scores and leaves out Aarav, whose marks dropped last term. However, Aarav had been recovering from an illness and missed two weeks of school. Since returning, he has improved his marks, built an impressive working science model and shown strong problem-solving skills.</p>
+  <p>The AI was not given information about his illness, recent progress or practical abilities.</p>
+  <div class="callout"><strong>What the AI recommended:</strong> “Do not select Aarav. His previous marks are lower than those of the other shortlisted students.”</div>
+  <p class="instructions"><strong>Your challenge:</strong> Should the school follow the AI recommendation, question it, or use a better method to select the team?</p>
+</section>
+
+<section id="quiz" class="interactive-only">
+  <div class="progress-row"><span id="counter">Question 1 of 5</span><span id="scoreCounter">Score: 0</span></div>
+  <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="q-label" id="type"></div>
+  <div class="question" id="question"></div>
+  <div class="small" id="note"></div>
+  <form id="options"></form>
+  <div class="hint"><button type="button" class="secondary" id="hintButton">Show hint</button><div id="hintBox" class="hint-box hidden" role="note"></div></div>
+  <div id="feedback" class="feedback hidden" aria-live="polite"></div>
+  <div class="btn-row"><button type="button" class="primary" id="submit">Check answer</button><button type="button" class="primary hidden" id="next">Next question →</button></div>
+</section>
+
+<section id="results" class="hidden">
+  <h2>Quiz complete!</h2>
+  <p class="score" id="finalScore">5 / 5</p>
+  <p id="resultMessage"></p>
+  <div class="takeaway"><strong>Ni Skills takeaway:</strong> AI can help organise information, but previous marks may not show the full picture. People should check relevant evidence, consider context and remain responsible for the final decision.</div>
+  <div class="btn-row interactive-only"><button type="button" class="primary" id="restart">Try again</button><button type="button" class="secondary" id="print">Print / Save as PDF</button></div>
+</section>
+
+<section>
+  <h2>Remember the human-in-charge approach</h2>
+  <ol>
+    <li><strong>Question:</strong> What information did the AI use?</li>
+    <li><strong>Check:</strong> What relevant context or evidence may be missing?</li>
+    <li><strong>Decide responsibly:</strong> Consider fairness, team needs and the evidence before making a final decision.</li>
+  </ol>
+</section>
+<footer>Ni Skills · Think critically. Use AI thoughtfully. Humans remain responsible.</footer>
+</div>
+<script>
+const qs=[
+ {type:"Single-select",multi:false,text:"An AI selects a school science team using previous examination marks. Aarav is excluded because his marks fell while he was recovering from an illness, although he has since improved and built an impressive science model. What is the main weakness in the AI's recommendation?",opts:[
+  ["It used too many different kinds of information",false,"The scenario says the tool mainly used previous marks, so too many kinds of information was not the problem."],
+  ["It missed important context about Aarav",true,"Previous marks did not show his illness, recent improvement or practical science skills, so the recommendation used incomplete evidence."],
+  ["It selected students who enjoy science",false,"The scenario does not say the AI measured students' enjoyment of science."],
+  ["It gave every student the same score",false,"The AI compared students' previous marks and selected those with the highest scores; it did not give everyone the same score."]
+ ],hint:"Compare the information the AI used with the other facts the teacher knows about Aarav."},
+ {type:"Multi-select · Choose all that apply",multi:true,text:"The school wants to reconsider the science team fairly. Which information would be useful to consider alongside previous examination marks? Select all that apply.",opts:[
+  ["Aarav's recent improvement in his studies",true,"Recent progress provides relevant evidence about his current learning, which older marks may not show."],
+  ["The quality of his working science model",true,"Practical work can provide evidence of scientific skills that examination marks alone may not capture."],
+  ["The team's needs and students' ability to collaborate",true,"A team needs a suitable mix of skills, and collaboration is relevant to completing a group challenge."],
+  ["A rule that the highest past marks must always win",false,"This rule would repeat the limitation of relying on historical marks instead of reviewing the full set of relevant evidence."]
+ ],hint:"Think about evidence of current ability, practical skills and what makes a team effective."},
+ {type:"True or false",multi:false,text:"Because the AI used real examination marks, its recommendation must be fair even if it did not have information about Aarav's illness or recent progress.",opts:[
+  ["True",false,"Real marks can be useful, but they do not guarantee fairness when relevant context and other evidence are missing."],
+  ["False",true,"A recommendation can be unfair or incomplete even when it uses real data, because the data may not show the full situation."]
+ ],hint:"Consider whether accurate information about the past always tells the whole story about a student today."},
+ {type:"Single-select",multi:false,text:"The teacher wants to use AI responsibly when choosing the science team. Which approach is best?",opts:[
+  ["Follow the AI list without checking it",false,"This leaves no room to notice missing context or errors in the recommendation."],
+  ["Ignore all marks and choose friends",false,"This replaces one incomplete method with a potentially biased choice that may not use relevant evidence."],
+  ["Review the AI list alongside relevant evidence and make an accountable decision",true,"AI can support the process, while the teacher reviews relevant evidence such as progress, practical skills and team needs."],
+  ["Select Aarav automatically because he was ill",false,"His illness explains some earlier results, but a fair decision should consider the complete evidence rather than guarantee selection."]
+ ],hint:"Look for an approach that uses the tool's information without treating its recommendation as final."},
+ {type:"True or false",multi:false,text:"A teacher can use an AI recommendation as one source of information while remaining responsible for checking relevant evidence before selecting the team.",opts:[
+  ["True",true,"AI can support a decision, while the teacher checks the evidence and takes responsibility for the selection."],
+  ["False",false,"Using AI does not remove the teacher's responsibility to review the recommendation and consider relevant evidence."]
+ ],hint:"Think about the difference between receiving advice and being responsible for acting on it."}
+];
+let i=0,score=0,locked=false;
+const $=id=>document.getElementById(id);
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function render(){
+ locked=false;let q=qs[i];
+ $("counter").textContent=`Question ${i+1} of ${qs.length}`;$("scoreCounter").textContent=`Score: ${score}`;
+ $("progressFill").style.width=`${i/qs.length*100}%`;$("type").textContent=q.type;$("question").textContent=q.text;
+ $("note").textContent=q.multi?"Select every answer you think is correct.":"Choose one answer.";
+ $("options").innerHTML="";
+ q.opts.forEach((o,j)=>{let lab=document.createElement("label");lab.className="option";let inp=document.createElement("input");inp.type=q.multi?"checkbox":"radio";inp.name="answer";inp.value=j;let sp=document.createElement("span");sp.textContent=o[0];lab.append(inp,sp);$("options").append(lab);});
+ $("hintBox").textContent=q.hint;$("hintBox").classList.add("hidden");$("hintButton").textContent="Show hint";
+ $("feedback").className="feedback hidden";$("feedback").innerHTML="";$("submit").classList.remove("hidden");$("submit").disabled=false;$("next").classList.add("hidden");
+}
+$("hintButton").onclick=()=>{$("hintBox").classList.toggle("hidden");$("hintButton").textContent=$("hintBox").classList.contains("hidden")?"Show hint":"Hide hint";};
+$("submit").onclick=()=>{
+ if(locked)return;let q=qs[i],inputs=[...$("options").querySelectorAll("input")],chosen=inputs.map((x,j)=>x.checked?j:-1).filter(x=>x>=0);
+ if(!chosen.length){$("feedback").className="feedback bad";$("feedback").innerHTML="<h3>Choose an answer first</h3><p>Select your answer, then check it.</p>";return;}
+ locked=true;let correct=q.opts.map((o,j)=>o[1]?j:-1).filter(j=>j>=0);
+ let ok=chosen.length===correct.length&&chosen.every(j=>correct.includes(j));if(ok)score++;
+ $("scoreCounter").textContent=`Score: ${score}`;
+ inputs.forEach((x,j)=>{x.disabled=true;if(q.opts[j][1])x.closest("label").classList.add("correct");else if(x.checked)x.closest("label").classList.add("incorrect");});
+ let detail=chosen.map(j=>`<p><strong>${esc(q.opts[j][0])}</strong> — ${esc(q.opts[j][2])}</p>`).join("");
+ let missed=correct.filter(j=>!chosen.includes(j)).map(j=>`<p><strong>Also consider: ${esc(q.opts[j][0])}</strong> — ${esc(q.opts[j][2])}</p>`).join("");
+ $("feedback").className=`feedback ${ok?"good":"bad"}`;
+ $("feedback").innerHTML=`<h3>${ok?"Well done!":"Let's learn from this."}</h3><p>${ok?"You selected the complete correct answer.":q.multi?"For this question, select all correct options and no incorrect options.":"Review the explanation and try applying it to the scenario."}</p>${detail}${missed}`;
+ $("submit").classList.add("hidden");$("next").textContent=i===qs.length-1?"See results →":"Next question →";$("next").classList.remove("hidden");$("progressFill").style.width=`${(i+1)/qs.length*100}%`;
+};
+$("next").onclick=()=>{
+ i++;if(i<qs.length){render();return;}
+ $("quiz").classList.add("hidden");$("results").classList.remove("hidden");$("finalScore").textContent=`${score} / ${qs.length}`;
+ $("resultMessage").textContent=score===5?"Excellent work! You considered context, evidence and fairness.":score>=3?"Good effort! Review the feedback to strengthen your reasoning about AI and fair decisions.":"Keep practising. Remember to check evidence and context before acting on an AI recommendation.";
+ $("results").scrollIntoView({behavior:"smooth",block:"start"});
+};
+$("restart").onclick=()=>{i=0;score=0;$("results").classList.add("hidden");$("quiz").classList.remove("hidden");render();$("quiz").scrollIntoView({behavior:"smooth",block:"start"});};
+$("print").onclick=()=>window.print();
+render();
+</script>
+</body>
+</html>
